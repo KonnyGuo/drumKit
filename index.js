@@ -1,6 +1,6 @@
-for (var i = 0; i < document.querySelectorAll(".drum").length; i++){
+for (let i = 0; i < document.querySelectorAll(".drum").length; i++){
     document.querySelectorAll(".drum")[i].addEventListener("click", function(){
-        var drumInnerHtml = this.innerHTML;
+        let drumInnerHtml = this.innerHTML;
         
         makeSound(drumInnerHtml);
         addAnimation(drumInnerHtml);
@@ -13,7 +13,7 @@ for (var i = 0; i < document.querySelectorAll(".drum").length; i++){
     })
 
     function makeSound(pressedKey){
-        var playAudio;
+        let playAudio;
         switch (pressedKey) {
             case "w":
                 playAudio = new Audio("sounds/tom-1.mp3");
@@ -57,7 +57,7 @@ for (var i = 0; i < document.querySelectorAll(".drum").length; i++){
 
     function addAnimation(pressedKey){
 
-        var grabButton = document.querySelector("." + pressedKey);
+        let grabButton = document.querySelector("." + pressedKey);
 
         grabButton.classList.add("pressed");
 
